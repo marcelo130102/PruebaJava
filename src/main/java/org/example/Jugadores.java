@@ -26,7 +26,7 @@ public class Jugadores {
         for (Map.Entry<String, String> jugador : jugadores.entrySet()) {
             mensaje = mensaje.concat(jugador.getValue());
             logger.log(Level.INFO, mensaje);
-            break;
+
         }
 
     }
