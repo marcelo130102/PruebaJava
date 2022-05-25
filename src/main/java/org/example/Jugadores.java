@@ -24,7 +24,7 @@ public class Jugadores {
         logger.log(Level.INFO, "Los ganadores con la estrategia " + estrategia);
         String mensaje = "El jugador ";
         for (Map.Entry<String, String> jugador : jugadores.entrySet()) {
-            mensaje.concat(jugador.getValue());
+            mensaje = mensaje.concat(jugador.getValue());
             logger.log(Level.INFO, mensaje);
             break;
         }
