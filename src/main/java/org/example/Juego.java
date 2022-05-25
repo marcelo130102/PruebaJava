@@ -55,7 +55,7 @@ public class Juego {
         //Generación de números aleatorios
         for(int i = 1; i <=5; i++) {
             int value = random.nextInt((max - min) + min) + min;
-            ronda.concat(String.valueOf(value)+ " ");
+            ronda = ronda.concat(String.valueOf(value)+ " ");
             if(value%2 == 0){
                 est1++;
             }
