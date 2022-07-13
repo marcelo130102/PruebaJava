@@ -5,9 +5,9 @@ import java.util.logging.Logger;
 public class Suscriber {
     private String name;
     private String mensajeActual = "";
-    private Logger logger = Logger.getLogger(Main.class.getName());
-    Suscriber(String _name){
-        name = _name;
+    private Logger logger = Logger.getLogger(Suscriber.class.getName());
+    Suscriber(String nameS){
+        name = nameS;
     }
     public void setMensaje(String mensaje){
         mensajeActual = mensaje;
@@ -18,6 +18,7 @@ public class Suscriber {
     }
 
     public void getMensaje(){
-        logger.log(Level.INFO, "El mensaje para " + name + " es " + mensajeActual);
+        String mensaje = "El mensaje para " + name + " es " + mensajeActual;
+        logger.log(Level.INFO, mensaje);
     }
 }

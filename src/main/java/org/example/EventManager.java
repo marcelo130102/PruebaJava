@@ -9,7 +9,7 @@ import com.google.common.collect.Multimap;
 
 public class EventManager {
     Multimap<String, Suscriber> listeners;
-    private Logger logger = Logger.getLogger(Main.class.getName());
+    private Logger logger = Logger.getLogger(EventManager.class.getName());
 
     public EventManager(){
         listeners = ArrayListMultimap.create();
@@ -23,7 +23,8 @@ public class EventManager {
 
     public void notify(String mensajeSub, String topico){
         Collection<Suscriber> suscriptores = listeners.get(topico);
-        logger.log(Level.INFO, "Se envió el mensaje: " + mensajeSub);
+        String mensaje = "Se envió el mensaje: " + mensajeSub;
+        logger.log(Level.INFO, mensaje);
         for (Suscriber suscriptor : suscriptores) {
                 suscriptor.setMensaje(mensajeSub);
                 logger.log(Level.INFO, "Notificado");
