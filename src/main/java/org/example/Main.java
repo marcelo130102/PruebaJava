@@ -22,10 +22,5 @@ public class Main {
 
         suscriptor1.getMensaje();
         suscriptor2.getMensaje();
-        
-        
-
-
-
     }
 }
