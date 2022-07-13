@@ -23,7 +23,6 @@ public class Http {
 
     public String get(String url){
         this.get = new HttpGet(url);
-
         try {
             this.response = this.httpClient.execute(this.get);
             this.resource = EntityUtils.toString(this.response.getEntity());
