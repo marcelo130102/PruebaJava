@@ -21,7 +21,7 @@ public class Http {
         this.resource = null;
     }
 
-    public String GET(String url){
+    public String get(String url){
         this.get = new HttpGet(url);
 
         try {
